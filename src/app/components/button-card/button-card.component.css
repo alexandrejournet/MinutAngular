@@ -1,0 +1,30 @@
+.button {
+    padding: 5%;
+}
+
+.buttonContent{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    vertical-align: center;
+}
+
+.buttonCard{
+    height:20vh;
+    background-color: rgb(222,131,64);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    vertical-align: center;
+
+}
+
+.icon {
+    border: solid white 1px;
+    border-radius: 100%;
+    background-color: rgb(211, 90, 0);
+    padding:5px;
+}
