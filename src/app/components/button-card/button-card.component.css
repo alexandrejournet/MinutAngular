@@ -1,5 +1,7 @@
 .button {
-    padding: 5%;
+    height:20%;
+    width: 40%;
+    padding:20px;
 }
 
 .buttonContent{
@@ -12,8 +14,9 @@
 }
 
 .buttonCard{
-    height:20vh;
-    background-color: rgb(222,131,64);
+    height: 20vh;
+    width: 25vw;
+    background-color: rgb(32, 32, 32);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,4 +30,18 @@
     border-radius: 100%;
     background-color: rgb(211, 90, 0);
     padding:5px;
+    width:60px;
+    height:60px;
+    font-size:60px;
+}
+
+.title{
+    font-size:25px;
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px){
+    .buttonCard {
+        width: 80vw;
+    }
 }

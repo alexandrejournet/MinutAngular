@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -48,6 +49,9 @@ import {
 import { LoginComponent } from './page/login/login.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { RegisterComponent } from './page/register/register.component';
+import { HeaderComponent } from './components/header/header.component';
+import { SidenavListComponent } from './components/sidenav-list/sidenav-list.component';
+import { FlexLayoutModule } from '@angular/flex-layout'; 
 
 @NgModule({
   declarations: [
@@ -56,7 +60,8 @@ import { RegisterComponent } from './page/register/register.component';
     ButtonCardComponent,
     LoginComponent,
     TopbarComponent,
-    RegisterComponent
+    HeaderComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
@@ -98,7 +103,9 @@ import { RegisterComponent } from './page/register/register.component';
     MatTableModule,
     MatTabsModule,
     MatToolbarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    FlexLayoutModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
