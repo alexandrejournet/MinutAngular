@@ -1,1 +1,33 @@
 
+<mat-toolbar color="black">
+  <div fxShow="true" fxHide.gt-sm="true">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+  <a mat-button class="companyName" routerLink="/">
+    <span>Minut Angular</span>
+  </a>
+  <span class="spacer"></span>
+  <div fxShow="true" fxHide.lt-md="true">
+    <a mat-button ><mat-icon>info</mat-icon></a>
+    <a mat-button routerLink="/login"><mat-icon>account_circle</mat-icon></a>
+    <a mat-button routerLink="/register"><mat-icon>power_settings_new</mat-icon></a>
+  </div>
+</mat-toolbar>
+<mat-sidenav-container fxFlexFill class="container">
+  <mat-sidenav #sidenav fxLayout="column" opened="false" fxHide.gt-sm="true">
+    <div fxLayout="column">
+        <a mat-button routerLink="/login"><mat-icon>account_circle</mat-icon> Mon compte</a>
+        <a mat-button routerLink="/register"><mat-icon>power_settings_new</mat-icon> Déconnexion</a>
+        <a class="drawer-bottom" mat-button ><mat-icon>info</mat-icon> A propos</a>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content fxFlexFill class="content">
+    <app-particles></app-particles>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+  <app-footer></app-footer>
+</mat-sidenav-container>
