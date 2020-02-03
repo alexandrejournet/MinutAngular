@@ -28,7 +28,7 @@
 .icon {
     border: solid white 1px;
     border-radius: 100%;
-    background-color: rgb(211, 90, 0);
+    background-color: rgb(220, 220, 220);
     padding:5px;
     width:60px;
     height:60px;
@@ -37,9 +37,10 @@
 
 .title{
     font-size:25px;
+    color:white
 }
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px){
     .buttonCard {
         width: 80vw;

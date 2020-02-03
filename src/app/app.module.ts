@@ -53,6 +53,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BottomSheetComponent } from './components/bottom-sheet/bottom-sheet.component';
 import { ParticlesComponent } from './components/particles/particles.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { ParticlesComponent } from './components/particles/particles.component';
     HeaderComponent,
     RegisterComponent,
     BottomSheetComponent,
-    ParticlesComponent
+    ParticlesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
