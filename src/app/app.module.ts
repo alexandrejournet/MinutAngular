@@ -47,6 +47,7 @@ import {
 } from '@angular/material';
 import { LoginComponent } from './page/login/login.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
+import { RegisterComponent } from './page/register/register.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { TopbarComponent } from './components/topbar/topbar.component';
     HomeComponent,
     ButtonCardComponent,
     LoginComponent,
-    TopbarComponent
+    TopbarComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
