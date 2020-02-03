@@ -30,10 +30,14 @@ button{
 .example-icon {
     padding: 0 14px;
   }
-  
-  .example-spacer {
+
+  .spacer {
     flex: 1 1 auto;
   }
+
+.container {
+  height:93vh;
+}
 
   .mat-sidenav-content{
       font-size: 200%;
@@ -41,4 +45,8 @@ button{
   }
   .drawer-bottom{
       flex:bottom;
+  }
+
+  .content{
+    height:93vh !important;
   }

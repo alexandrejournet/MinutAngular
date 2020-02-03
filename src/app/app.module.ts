@@ -50,8 +50,9 @@ import { LoginComponent } from './page/login/login.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { RegisterComponent } from './page/register/register.component';
 import { HeaderComponent } from './components/header/header.component';
-import { SidenavListComponent } from './components/sidenav-list/sidenav-list.component';
-import { FlexLayoutModule } from '@angular/flex-layout'; 
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BottomSheetComponent } from './components/bottom-sheet/bottom-sheet.component';
+import { ParticlesComponent } from './components/particles/particles.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     LoginComponent,
     TopbarComponent,
     HeaderComponent,
-    SidenavListComponent
+    RegisterComponent,
+    BottomSheetComponent,
+    ParticlesComponent
   ],
   imports: [
     BrowserModule,
