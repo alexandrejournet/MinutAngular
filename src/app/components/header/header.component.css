@@ -1,3 +1,28 @@
+mat-toolbar{
+  background-color:rgb(25, 25, 25);
+}
+
+.title{
+  color:white;
+  transition: all 0.3s ease-out;
+}
+
+.title:hover {
+  color:orange;
+  font-size:105%;
+  transition: all 0.3s ease-out;
+}
+
+mat-icon{
+  color:white;
+  transition: all 0.3s ease-out;
+}
+
+mat-icon:hover {
+  color:orange;
+  transform: scale(1.2) translateY(0);
+  transition: all 0.3s ease-out;
+}
 
 .companyName{
     font-size: 150%;
