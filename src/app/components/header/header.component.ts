@@ -7,8 +7,10 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  isLogged:boolean;
+
   constructor() { }
- 
+
   ngOnInit() {
   }
 

@@ -35,11 +35,24 @@
   transition: all 0.3s ease-out;
 }
 
+@keyframes scale
+  {
+    0% {
+        transform: scale(1) rotate(0);
+    }
+
+    100% {
+        transform: scale(1.2) rotate(360deg);
+    }
+}
+
 .buttonCard:hover mat-icon {
   color: rgb(233, 151, 0);
   background-color: rgb(32, 32, 32);
   transition: all 0.3s ease-out;
+  animation: scale 1s alternate infinite;
 }
+
 
 .title, mat-icon {
   transition: all 0.3s ease-out;
