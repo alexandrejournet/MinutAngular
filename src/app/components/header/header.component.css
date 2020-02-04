@@ -56,9 +56,24 @@ button{
   }
 
   .mat-sidenav-content{
-      font-size: 200%;
       text-align: center;
   }
   .drawer-bottom{
       flex:bottom;
+  }
+
+  mat-sidenav {
+    background-color: #CECECEEE;
+  }
+
+  mat-sidenav mat-icon {
+    color:rgb(25, 25, 25);
+  }
+
+  mat-sidenav a {
+    color: black;
+  }
+
+  .mat-drawer-backdrop {
+    background-color: #CECECE;
   }
