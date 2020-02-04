@@ -1,30 +1,34 @@
-
-<mat-toolbar>
-  <div fxShow="true" fxHide.gt-sm="true">
-    <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-  </div>
-
-  <a mat-button class="companyName" routerLink="/">
-    <span class="title">Minut Angular</span>
-  </a>
-  <span class="spacer"></span>
-  <div fxShow="true" fxHide.lt-md="true">
-    <a mat-button ><mat-icon>info</mat-icon></a>
-    <a mat-button routerLink="/login"><mat-icon>account_circle</mat-icon></a>
-    <a mat-button routerLink="/register"><mat-icon>power_settings_new</mat-icon></a>
-  </div>
-</mat-toolbar>
-<mat-sidenav-container class="container">
-  <mat-sidenav #sidenav fxLayout="column" opened="false" fxHide.gt-sm="true">
-    <div fxLayout="column">
-        <a mat-button routerLink="/login"><mat-icon>account_circle</mat-icon> Mon compte</a>
-        <a mat-button routerLink="/register"><mat-icon>power_settings_new</mat-icon> Déconnexion</a>
-        <a class="drawer-bottom" mat-button ><mat-icon>info</mat-icon> A propos</a>
+<div class="main-header-container">
+  <mat-toolbar>
+    <div fxShow="true" fxHide.gt-sm="true">
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
     </div>
-  </mat-sidenav>
-  <mat-sidenav-content class="content">
-    <app-particles></app-particles>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
+
+    <a mat-button class="companyName" routerLink="/">
+      <span class="title">Minut Angular</span>
+    </a>
+    <span class="spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button ><mat-icon>info</mat-icon></a>
+      <a mat-button routerLink="/login"><mat-icon>account_circle</mat-icon></a>
+      <a mat-button routerLink="/register"><mat-icon>power_settings_new</mat-icon></a>
+    </div>
+  </mat-toolbar>
+  <div class="content">
+    <mat-sidenav-container class="container">
+      <mat-sidenav #sidenav fxLayout="column" opened="false" fxHide.gt-sm="true">
+        <div fxLayout="column">
+            <a mat-button routerLink="/login"><mat-icon>account_circle</mat-icon> Mon compte</a>
+            <a mat-button routerLink="/register"><mat-icon>power_settings_new</mat-icon> Déconnexion</a>
+            <a class="drawer-bottom" mat-button ><mat-icon>info</mat-icon> A propos</a>
+        </div>
+      </mat-sidenav>
+      <mat-sidenav-content class="content">
+        <app-particles></app-particles>
+        <router-outlet></router-outlet>
+
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
   <app-footer></app-footer>
-</mat-sidenav-container>
+</div>
