@@ -1,4 +1,4 @@
-import { SnackbarService } from './../../services/snackbar-service.service';
+import { SnackbarService } from '../../services/snackbar-service.service';
 import { Component, OnInit, Input, NgZone, Injector } from '@angular/core';
 import {Router} from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';

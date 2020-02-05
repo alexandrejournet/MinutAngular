@@ -46,9 +46,9 @@ import {
   MatToolbarModule,
   MatTooltipModule,
 } from '@angular/material';
-import { LoginComponent } from './page/login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
-import { RegisterComponent } from './page/register/register.component';
+import { RegisterComponent } from './auth/register/register.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BottomSheetComponent } from './components/bottom-sheet/bottom-sheet.component';
