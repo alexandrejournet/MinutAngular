@@ -9,19 +9,18 @@
         <div>
           <mat-card-content>
             <mat-form-field class="field-full-width">
-              <label style="color: white;">Email :<input matInput type="text"></label>
+              <label style="color: white;">Email :<input matInput type="text" name="username" [(ngModel)]="username" placeholder=" "></label>
             </mat-form-field>
 
             <mat-form-field class="field-full-width">
-              <label style="color: white;">Mot de passe :<input matInput type="password"></label>
+              <label style="color: white;">Mot de passe :<input matInput type="password" name="password" [(ngModel)]="password" placeholder=" "></label>
             </mat-form-field>
           </mat-card-content>
-          <button mat-button class="btn-block">Connexion</button>
+          <button mat-button class="btn-block" (click)="login()">Connexion</button>
         </div>
         <div class="notRegistered">
-          <label>Pas inscrit ? Accéder à la page d'<a style="color: orange;" routerLink="/register">Inscription</a></label>
+          <label>Pas encore inscrit ? Accéder à la page d'<a style="color: orange;" routerLink="/register">Inscription</a></label>
         </div>
       </form>
     </mat-card>
   </div>
-  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
