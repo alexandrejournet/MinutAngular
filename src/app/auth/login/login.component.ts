@@ -1,8 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { SnackbarService } from './../../services/snackbar-service.service';
+import { Component, OnInit, Input, NgZone, Injector } from '@angular/core';
 import {Router} from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
 import { User } from '../../shared/models/user.model';
-import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition, MatSnackBarConfig } from '@angular/material';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 
 @Component({
   selector: 'app-login',
@@ -13,25 +14,18 @@ import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition
 export class LoginComponent implements OnInit {
   constructor(private router: Router,
               private authService: AuthService,
-              private snackBar: MatSnackBar) { }
+              public injector: Injector,
+              private zone: NgZone) { }
 
   @Input() username: string;
   @Input() password: string;
   user: User;
 
-  horizontalPosition: MatSnackBarHorizontalPosition = 'right';
-  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+  public snackBar: SnackbarService;
 
   ngOnInit() {
     this.user = new User();
-  }
-
-  openSnackBar(message: string, action: string) {
-    const config = new MatSnackBarConfig();
-    config.verticalPosition = this.verticalPosition;
-    config.horizontalPosition = this.horizontalPosition;
-
-    this.snackBar.open(message, action, config);
+    this.snackBar = this.injector.get(SnackbarService);
   }
 
   login(): void {
@@ -46,7 +40,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['home']);
 
     } else {
-      this.openSnackBar('Votre identifiant ou mot de passe est erroné', 'Fermer');
+      this.snackBar.error('Votre identifiant ou mot de passe est erroné');
     }
 
   }
