@@ -1,10 +1,10 @@
 import { PredefinedComponent } from './page/core/predefined/predefined.component';
 import { CreateComponent } from './page/core/create/create.component';
-import { RegisterComponent } from './page/register/register.component';
+import { RegisterComponent } from './auth/register/register.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './page/home/home.component';
-import { LoginComponent } from './page/login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 
 
