@@ -1,4 +1,4 @@
-import { SnackbarService } from '../../services/snackbar-service.service';
+import { SnackbarService } from '../../services/snackbar.service';
 import { Component, OnInit, Input, NgZone, Injector } from '@angular/core';
 import {Router} from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
@@ -8,7 +8,7 @@ import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 
 export class LoginComponent implements OnInit {
@@ -30,6 +30,9 @@ export class LoginComponent implements OnInit {
 
   login(): void {
 
+    this.username = 'admin';
+    this.password = 'admin';
+
     if (this.username === 'admin' && this.password === 'admin'){
 
         this.user.userName = this.username;
@@ -42,6 +45,5 @@ export class LoginComponent implements OnInit {
     } else {
       this.snackBar.error('Votre identifiant ou mot de passe est erroné');
     }
-
   }
-  }
+}

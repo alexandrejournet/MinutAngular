@@ -6,16 +6,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './page/home/home.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
+import {AdminComponent} from './page/admin/admin.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
   { path: 'register', component: RegisterComponent, canActivate: [AuthGuard]},
   { path: 'create', component: CreateComponent, canActivate: [AuthGuard]},
   { path: 'predefine', component: PredefinedComponent, canActivate: [AuthGuard]},
   { path: 'mine', component: CreateComponent, canActivate: [AuthGuard]},
+  { path: 'settings', component: AdminComponent, canActivate: [AuthGuard]},
 ];
 
 @NgModule({

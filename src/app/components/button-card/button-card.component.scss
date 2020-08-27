@@ -1,0 +1,81 @@
+.button {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  outline: none;
+}
+
+.buttonContent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  vertical-align: center;
+}
+
+.buttonCard {
+  height: 15vh;
+  width: 20vw;
+  background-color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  vertical-align: center;
+  transition: all 0.3s ease-out;
+}
+
+.buttonCard:hover {
+  transform: scale(1.05) translateY(0);
+  transition: all 0.3s ease-out;
+}
+
+.buttonCard:hover .title {
+  color: var(--blue);
+  transition: all 0.3s ease-out;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+
+  100% {
+    transform: scale(1.2) rotate(360deg);
+  }
+}
+
+.buttonCard:hover mat-icon {
+  color: var(--blue);
+  background-color: var(--grey);
+  transition: all 0.3s ease-out;
+  animation: scale 1s alternate infinite;
+}
+
+
+.title, mat-icon {
+  transition: all 0.3s ease-out;
+  text-align: center;
+}
+
+.icon {
+  border: solid white 1px;
+  border-radius: 100%;
+  background-color: rgb(220, 220, 220);
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  font-size: 60px;
+}
+
+.title {
+  font-size: 25px;
+  color: white
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .buttonCard {
+    width: 80vw;
+  }
+}

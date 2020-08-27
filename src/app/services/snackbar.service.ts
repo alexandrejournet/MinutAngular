@@ -1,5 +1,5 @@
-import { Injectable, NgZone } from '@angular/core';
-import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
+import {Injectable, NgZone} from '@angular/core';
+import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +9,10 @@ export class SnackbarService {
   constructor(
     public snackbar: MatSnackBar,
     private zone: NgZone,
-  ) { }
+  ) {
+  }
 
-  show(message:string){
+  show(message: string) {
     const config = new MatSnackBarConfig();
     config.panelClass = ['green'];
     config.verticalPosition = 'top';

@@ -4,7 +4,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-button-card',
   templateUrl: './button-card.component.html',
-  styleUrls: ['./button-card.component.css']
+  styleUrls: ['./button-card.component.scss']
 })
 export class ButtonCardComponent implements OnInit {
 

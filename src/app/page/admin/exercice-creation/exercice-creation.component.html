@@ -1,0 +1,20 @@
+<table>
+  <thead>
+  <th>Name</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let exercice of exercices | async">
+
+    <td>{{exercice.data.name}}</td>
+    <td>
+      <button (click)="delete(exercice.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<form>
+  <label>Ajouter un exercice : </label>
+  <input (change)="exerciceChange($event.target)" title="name" type="text" placeholder="Nom de l'exercice">
+  <input type="submit" value="Add an exercice" (click)="create()">
+</form>

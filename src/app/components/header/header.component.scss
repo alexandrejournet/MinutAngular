@@ -1,0 +1,90 @@
+.main-header-container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background-color: var(--grey);
+}
+
+.title {
+  color: white;
+  transition: all 0.3s ease-out;
+  padding-left: 1vw;
+  font-size: 2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.title:hover {
+  color: var(--blue);
+}
+
+mat-icon {
+  color: white;
+  transition: all 0.3s ease-out;
+}
+
+mat-icon:hover {
+  color: orange;
+  transform: scale(1.2) translateY(0);
+  transition: all 0.3s ease-out;
+}
+
+.companyName {
+  font-size: 150%;
+}
+
+div {
+  overflow: inherit;
+}
+
+.mat-sidenav-container {
+  background-color: White;
+  height: 100%;
+}
+
+.content {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  font-size: 110%;
+  white-space: normal;
+}
+
+button {
+  font-size: 110%;
+  min-width: min-content;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-sidenav-content {
+  text-align: center;
+}
+
+.drawer-bottom {
+  flex: bottom;
+}
+
+mat-sidenav {
+  background-color: #CECECEEE;
+}
+
+mat-sidenav mat-icon {
+  color: rgb(25, 25, 25);
+}
+
+mat-sidenav a {
+  color: black;
+}
+
+.mat-drawer-backdrop {
+  background-color: #CECECE;
+}

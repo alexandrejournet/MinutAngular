@@ -1,5 +1,12 @@
-<div class="time-container" fxLayout="column" fxLayoutAlign="center center">
+<mat-card>
+  <mat-card-title>Combien de temps voulez-vous qu'un exercice dure ?</mat-card-title>
+  <mat-radio-group aria-label="Select an option">
+    <mat-radio-button value="1">20 secondes</mat-radio-button>
+    <mat-radio-button value="2">30 secondes</mat-radio-button>
+    <mat-radio-button value="3">Autre : <input matInput type="number" min="0" max="60"></mat-radio-button>
+  </mat-radio-group>
+</mat-card>
 
-  <mat-card class="box">
-  </mat-card>
-</div>
+<mat-card>
+  <mat-card-title>Choisissez vos exercices !</mat-card-title>
+</mat-card>
